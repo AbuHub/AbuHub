@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ECC8AF;
+  }
+  .navbar {
+    background-color: #CE796B; /* Verizon Red */
+    overflow: hidden;
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: rgb(55, 41, 35);
+    text-align: right;
+    padding: 14px 14px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .navbar a:hover {
+    background-color: #ECC8AF; 
+  }
+#support
+{
+    position: relative;
+    
+}
