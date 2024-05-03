@@ -1,0 +1,14 @@
+#include <iostream>
+#include <array>
+using namespace std;
+int main()
+{
+	//denote storage capacity of a array by []
+	int a[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	a[0];
+	for (int i = 0; i < size(a); i++) 
+	{
+		cout << "value of int is : " << a[i] << endl;
+	}
+
+}
