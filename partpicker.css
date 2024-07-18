@@ -12,7 +12,7 @@ h2 {
   -webkit-text-stroke-color: rgb(255, 252, 252);
 }
 .PC{
-    position: fixed;
+    position: relative;
     left: 516.7px;
     top: -3px;
     -webkit-transform: scaleX(-1);
@@ -31,6 +31,14 @@ h2 {
     text-shadow: #f0f0f0;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: rgb(24, 24, 24)
+}
+.trans{
+    color: transparent; background-color: red; border-color: transparent; cursor: pointer;
+    position: fixed;
+    left: 685.7px;
+    top: 280px;
+    height: 105px;
+    width: 200px;
 }
 
 .button-86 {
