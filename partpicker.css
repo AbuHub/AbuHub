@@ -1,6 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/tt-norms-pro');
 body{
-    background-image: linear-gradient(to left,rgb(41, 40, 40), rgb(20, 20, 19));
+    background-image: linear-gradient(to left,rgb(73, 73, 73), rgb(0, 0, 0));
 }
 h2 {
     position: fixed;
@@ -8,6 +8,8 @@ h2 {
     top: 101.5.6px;
     font-size: 53.3px;
     font-family: 'TT Norms Pro', sans-serif;;
+    -webkit-text-stroke-width: 0.21px;
+  -webkit-text-stroke-color: rgb(255, 252, 252);
 }
 .PC{
     position: fixed;
