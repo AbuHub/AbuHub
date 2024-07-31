@@ -1,130 +1,185 @@
-@import url('https://fonts.cdnfonts.com/css/tt-norms-pro');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
+/* Base styles */
 body {
+    background-color: #131417;
     background-image: linear-gradient(to left, rgb(73, 73, 73), rgb(0, 0, 0));
-    margin: 0; /* Added to remove default body margin */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
 }
 
+.gpu{
+    position: fixed;
+    top: 50%;
+    left: 53%;
+    width: 18%;
+    height: 18%;
+}
+.cpu{
+    position: fixed;
+    top: 35%;
+    left: 60%;
+    width: 5%;
+    height: 10%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Header style */
 h2 {
     position: fixed;
-    left: 76.8px;
-    top: 101.5px; /* Corrected the syntax error: removed the extra decimal */
-    font-size: 53.3px;
-    font-family: 'TT Norms Pro', sans-serif;
-    -webkit-text-stroke-width: 0.21px;
-    -webkit-text-stroke-color: rgb(255, 252, 252);
+    left: 5%;
+    top: 10%;
+    font-size: 4vw;
+    font-family: 'Roboto Mono', monospace;
+    font-optical-sizing: auto;
+    font-style: italic;
+    color: white;
+    z-index: 10;
+    text-shadow: 0 0 7px rgba(255, 255, 255, 0.3), 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
+/* Relative positioned element */
 .PC {
-    position: relative;
-    left: 570.7px;
-    top: 50px;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
-
-.logo {
-    width: 342px;
-    position: absolute;
-    left: 1090.5px;
-    top: 215px;
-}
-
-.mqe {
-    position: absolute;
-    top: 690px;
-    left: -30px;
-    text-transform: uppercase;
-    text-shadow: 0 0 5px #f0f0f0; /* Corrected the text-shadow syntax */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(24, 24, 24);
-    
-}
-
-.trans {
-    color: transparent; background-color: transparent; border-color: transparent;
-  position: fixed;
-    left: 700.7px;
-    top: 330px;
-    height: 105px;
-    width: 240px;
-}
-
-.trans1{
-  color: transparent; background-color: transparent; border-color: transparent;
-  position: fixed;
-  left: 825.7px;
-  top: 250px;
-  height: 50px;
-  width: 50px;
-}
-
-.button-86 {
-    all: unset;
-    width: 360.6px; /* Added 'px' to fix the width value */
-    height: 130.9px; /* Added 'px' to fix the height value */
-    font-size: 33.9px;
-    background: transparent;
-    border: none;
     position: fixed;
-    color: #f0f0f0;
-    cursor: pointer;
-    z-index: 1;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    top: 350px;
-    left: 76.8px;
-    text-shadow: 0 0 5px #f0f0f0; /* Corrected the text-shadow syntax */
+    left: 40%;
+    top: 1vw;
+    transform: scaleX(-1);
+    width: 35%;
 }
 
-.button-86::after,
-.button-86::before {
+/* Absolutely positioned element */
+.logo {
+    position: fixed;
+    left: 78%;
+    width: 20vw;
+}
+
+/* Glow-on-hover button */
+.glow-on-hover {
+    width: 30%;
+    height: 10%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: fixed;
+    z-index: 0;
+    border-radius: 10px;
+    left: 5%;
+    top: 60%;
+    font-size: xx-large;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
     content: '';
     position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -99999;
-    transition: all 0.4s;
-}
-
-.button-86::before {
-    transform: translate(0%, 0%);
     width: 100%;
     height: 100%;
-    background: #28282d;
+    background: #111;
+    left: 0;
+    top: 0;
     border-radius: 10px;
+    z-index: -1;
 }
 
-.button-86::after {
-    transform: translate(10px, 10px);
-    width: 35px;
-    height: 35px;
-    background: #ffffff15;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 50px;
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
 
-.button-86:hover::before {
-    transform: translate(5%, 20%);
-    width: 110%;
-    height: 110%;
+/* Container for text animation */
+.container {
+    color: #e5e5e5;
+    font-size: 2.26rem;
+    text-transform: uppercase;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 4%;
+    top: -1%;
 }
 
-.button-86:hover::after {
-    border-radius: 10px;
-    transform: translate(0, 0);
-    width: 100%;
-    height: 100%;
+.animation {
+    height: 50px;
+    overflow: hidden;
+    margin-left: 1rem;
 }
 
-.button-86:active::after {
-    transition: 0s;
-    transform: translate(0, 5%);
+.animation > div > div {
+    padding: 0.25rem 0.75rem;
+    height: 2.81rem;
+    margin-bottom: 2.81rem;
+    display: inline-block;
+}
+
+.animation div:first-child {
+    animation: text-animation 8s infinite;
+}
+
+.first div {
+    background-color: #20491b;
+}
+
+.second div {
+    background-color: #1c1947;
+}
+
+@keyframes text-animation {
+    0% { margin-top: 0; }
+    10% { margin-top: 0; }
+    20% { margin-top: -5.62rem; }
+    30% { margin-top: -5.62rem; }
+    40% { margin-top: -11.24rem; }
+    60% { margin-top: -11.24rem; }
+    70% { margin-top: -5.62rem; }
+    80% { margin-top: -5.62rem; }
+    90% { margin-top: 0; }
+    100% { margin-top: 0; }
 }
