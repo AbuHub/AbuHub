@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        .three-d {
+            width: 100%;
+            height: 100vh; /* Added height to ensure the model viewer displays properly */
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer</title>
+</head>
+<body>    
+    <!-- Fixed the tag name from <model-veiwer> to <model-viewer> -->
+    <model-viewer src="./free_1975_porsche_911_930_turbo.glb" alt="3D Model of Porsche" auto-rotate camera-controls class="three-d"></model-viewer>
+    
+    <!-- Corrected script tag; added the correct type and kept it as "module" -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</body>
+</html>
