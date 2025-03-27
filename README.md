@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @AbuHub
 - 👀 I’m interested in coding/hardware
-- 🌱 I’m currently learning c++
-- 💞️ I’m looking to collaborate on Unreal Engine Projects
-- 📫 How to reach me : @abhaymcw@gmail.com
+- 🌱 I’m currently learning js
+- 💞️ I’m looking to collaborate on nothing
+- 📫 How to reach me : Do not reach out to me
 - 😄 Pronouns: HE/HIM
 - ⚡ Fun fact: Balls
 
